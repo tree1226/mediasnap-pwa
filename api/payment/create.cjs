@@ -2,7 +2,7 @@
  * 创建支付订单API - Vercel Serverless Function
  */
 
-const config = require('../payment.config.cjs');
+const config = require('../../payment.config.cjs');
 
 // 订单存储
 let mockOrders = {};
