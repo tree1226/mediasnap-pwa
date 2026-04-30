@@ -1,0 +1,49 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "WECHAT_MCHID": "@wechat_mchid",
+    "WECHAT_APIV3_KEY": "@wechat_apiv3_key",
+    "WECHAT_CERT_SERIAL_NO": "@wechat_cert_serial_no",
+    "WECHAT_APPID": "@wechat_appid",
+    "ALIPAY_APPID": "@alipay_appid",
+    "ALIPAY_PRIVATE_KEY": "@alipay_private_key",
+    "ALIPAY_PUBLIC_KEY": "@alipay_public_key"
+  }
+}
