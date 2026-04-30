@@ -37,13 +37,5 @@
       "destination": "/index.html"
     }
   ],
-  "env": {
-    "WECHAT_MCHID": "@wechat_mchid",
-    "WECHAT_APIV3_KEY": "@wechat_apiv3_key",
-    "WECHAT_CERT_SERIAL_NO": "@wechat_cert_serial_no",
-    "WECHAT_APPID": "@wechat_appid",
-    "ALIPAY_APPID": "@alipay_appid",
-    "ALIPAY_PRIVATE_KEY": "@alipay_private_key",
-    "ALIPAY_PUBLIC_KEY": "@alipay_public_key"
-  }
+  "env": {}
 }
